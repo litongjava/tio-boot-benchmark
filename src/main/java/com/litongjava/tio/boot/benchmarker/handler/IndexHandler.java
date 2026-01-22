@@ -1,4 +1,4 @@
-package com.litongjava.tio.boot.benchmarker.controller;
+package com.litongjava.tio.boot.benchmarker.handler;
 
 
 
@@ -13,8 +13,8 @@ import com.litongjava.tio.http.server.util.Resps;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * ab -k -n1000000 -c10 http://127.0.0.1:8080/json 
- * ab -k -n1000000 -c10 http://127.0.0.1:8080/plaintext
+ * ab -k -n1000000 -c100 http://127.0.0.1:8080/json 
+ * ab -k -n1000000 -c100 http://127.0.0.1:8080/plaintext
  */
 @Slf4j
 public class IndexHandler {
@@ -27,7 +27,7 @@ public class IndexHandler {
   }
 
   public HttpResponse plaintext(HttpRequest request) {
-    log.info(request.getId().toString());
+    //log.info(request.getId().toString());
     // 更高性能的写法
     HttpResponse ret = new HttpResponse(request);
     ret.setBody(HELLO_WORLD_BYTES);

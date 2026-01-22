@@ -1,9 +1,9 @@
 package com.litongjava.tio.boot.benchmarker.config;
 
 import com.litongjava.context.BootConfiguration;
-import com.litongjava.tio.boot.benchmarker.controller.CacheHandler;
-import com.litongjava.tio.boot.benchmarker.controller.DbHandler;
-import com.litongjava.tio.boot.benchmarker.controller.IndexHandler;
+import com.litongjava.tio.boot.benchmarker.handler.CacheHandler;
+import com.litongjava.tio.boot.benchmarker.handler.DbHandler;
+import com.litongjava.tio.boot.benchmarker.handler.IndexHandler;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.http.common.HttpConfig;
 import com.litongjava.tio.http.server.router.HttpRequestRouter;
