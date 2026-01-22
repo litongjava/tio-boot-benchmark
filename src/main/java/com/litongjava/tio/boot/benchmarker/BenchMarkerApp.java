@@ -13,9 +13,7 @@ public class BenchMarkerApp {
 
     long start = System.currentTimeMillis();
 
-    // 2. 设置 readWorkers 使用的线程工厂
     TioBootServer server = TioBootServer.me();
-
     // 3. 创建业务虚拟线程 Executor（每任务一个虚拟线程）
     ThreadFactory bizTf = Thread.ofVirtual().name("t-biz-v", 0).factory();
     ExecutorService bizExecutor = Executors.newThreadPerTaskExecutor(bizTf);
