@@ -38,7 +38,7 @@ public class BenchMarkerAppCconfig implements BootConfiguration {
     // config server
     HttpConfig httpConfig = TioBootServer.me().getHttpConfig();
     httpConfig.setWelcomeFile(null);
-    httpConfig.setCompatible1_0(false);
+    //httpConfig.setCompatible1_0(false);
 
     ServerTioConfig serverTioConfig = TioBootServer.me().getServerTioConfig();
     serverTioConfig.statOn = false;
