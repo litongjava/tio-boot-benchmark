@@ -4,6 +4,7 @@ import com.litongjava.context.BootConfiguration;
 import com.litongjava.tio.boot.benchmarker.handler.CacheHandler;
 import com.litongjava.tio.boot.benchmarker.handler.DbHandler;
 import com.litongjava.tio.boot.benchmarker.handler.IndexHandler;
+import com.litongjava.tio.boot.benchmarker.handler.PlaintextHandler;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.http.common.HttpConfig;
 import com.litongjava.tio.http.server.router.HttpRequestRouter;
@@ -22,8 +23,9 @@ public class BenchMarkerAppCconfig implements BootConfiguration {
     // add route
     IndexHandler controller = new IndexHandler();
 
+    PlaintextHandler plaintextHandler = new PlaintextHandler();
     r.add("/", controller::index);
-    r.add("/plaintext", controller::plaintext);
+    r.add("/plaintext", plaintextHandler);
     r.add("/json", controller::json);
 
     DbHandler dbQueryController = new DbHandler();
